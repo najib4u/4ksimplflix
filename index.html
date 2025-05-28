@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4KSimplFlix - Premium IPTV Service</title>
+    <meta name="description" content="Premium IPTV Service with 18,000+ Live Channels, 88,000+ VOD - 4K Ultra HD Quality, 100% Uptime Guarantee. Compatible with all devices.">
+    <meta name="keywords" content="IPTV, 4K IPTV, Live TV, VOD, Premium IPTV, IPTV Subscription, IPTV Service">
+    <meta name="author" content="4KSimplFlix">
+    <title>4KSimplFlix - Premium IPTV Service | 18,000+ Channels | 4K Quality</title>
+    <link rel="canonical" href="https://www.4ksimplflix.com/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -11,78 +15,228 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5',
-                        secondary: '#10b981',
-                        dark: '#1e293b',
+                        primary: '#1e3a8a',  // Dark navy blue
+                        secondary: '#3b82f6', // Bright blue for accents
+                        dark: '#0f172a',     // Very dark blue
                         light: '#f8fafc',
-                    }
+                        night: '#1e40af',    // Medium night blue
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(79,70,229,0.9) 0%, rgba(16,185,129,0.9) 100%);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
         }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.95) 0%, rgba(59, 130, 246, 0.95) 100%);
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        
         .pricing-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
+        
         .feature-icon {
-            width: 60px;
-            height: 60px;
+            width: 70px;
+            height: 70px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             margin: 0 auto;
         }
+        
+        .breadcrumb {
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+        }
+        
+        .breadcrumb a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        
+        .breadcrumb span {
+            color: #64748b;
+        }
+        
+        /* Night mode sections */
+        .night-section {
+            background-color: #0f172a;
+            color: #e2e8f0;
+        }
+        
+        .night-card {
+            background-color: #1e293b;
+            color: #e2e8f0;
+            border-color: #334155;
+        }
+        
+        .night-text {
+            color: #e2e8f0;
+        }
+        
+        .night-light-text {
+            color: #94a3b8;
+        }
     </style>
+    <!-- Schema.org markup for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "4KSimplFlix",
+      "url": "https://www.4ksimplflix.com",
+      "logo": "https://www.4ksimplflix.com/logo.png",
+      "sameAs": [
+        "https://www.facebook.com/4KSimplFlix",
+        "https://twitter.com/4KSimplFlix",
+        "https://www.instagram.com/4KSimplFlix"
+      ]
+    }
+    </script>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50">
     <!-- Header/Navigation -->
-    <header class="bg-white shadow-sm sticky top-0 z-50">
+    <header class="night-section shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center">
-                <i class="fas fa-tv text-primary text-3xl mr-2"></i>
-                <h1 class="text-2xl font-bold text-gray-800">4K<span class="text-primary">SimplFlix</span></h1>
+                <i class="fas fa-tv text-secondary text-3xl mr-2"></i>
+                <h1 class="text-2xl font-bold text-white">4K<span class="text-secondary">SimplFlix</span></h1>
             </div>
             <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-700 hover:text-primary font-medium">Home</a>
-                <a href="#features" class="text-gray-700 hover:text-primary font-medium">Features</a>
-                <a href="#pricing" class="text-gray-700 hover:text-primary font-medium">Pricing</a>
-                <a href="#faq" class="text-gray-700 hover:text-primary font-medium">FAQ</a>
-                <a href="#contact" class="text-gray-700 hover:text-primary font-medium">Contact</a>
+                <a href="#home" class="text-gray-300 hover:text-secondary font-medium">Home</a>
+                <a href="#features" class="text-gray-300 hover:text-secondary font-medium">Features</a>
+                <a href="#pricing" class="text-gray-300 hover:text-secondary font-medium">Pricing</a>
+                <a href="#channels" class="text-gray-300 hover:text-secondary font-medium">Channels</a>
+                <a href="#faq" class="text-gray-300 hover:text-secondary font-medium">FAQ</a>
+                <a href="#contact" class="text-gray-300 hover:text-secondary font-medium">Contact</a>
             </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#trial" class="bg-secondary text-white font-medium py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Free Trial</a>
+                <a href="https://clientarea.4ksimplflix.com" class="text-gray-300 hover:text-secondary font-medium">Client Area</a>
+            </div>
             <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                <button id="menu-btn" class="text-gray-300 focus:outline-none">
                     <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
-            <a href="#home" class="block py-2 text-gray-700 hover:text-primary">Home</a>
-            <a href="#features" class="block py-2 text-gray-700 hover:text-primary">Features</a>
-            <a href="#pricing" class="block py-2 text-gray-700 hover:text-primary">Pricing</a>
-            <a href="#faq" class="block py-2 text-gray-700 hover:text-primary">FAQ</a>
-            <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden night-section py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-300 hover:text-secondary">Home</a>
+            <a href="#features" class="block py-2 text-gray-300 hover:text-secondary">Features</a>
+            <a href="#pricing" class="block py-2 text-gray-300 hover:text-secondary">Pricing</a>
+            <a href="#channels" class="block py-2 text-gray-300 hover:text-secondary">Channels</a>
+            <a href="#faq" class="block py-2 text-gray-300 hover:text-secondary">FAQ</a>
+            <a href="#contact" class="block py-2 text-gray-300 hover:text-secondary">Contact</a>
+            <a href="#trial" class="block py-2 text-secondary font-medium">Free Trial</a>
+            <a href="https://clientarea.4ksimplflix.com" class="block py-2 text-gray-300 hover:text-secondary">Client Area</a>
         </div>
     </header>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="container mx-auto px-4 py-2 breadcrumb hidden md:block">
+        <span><a href="#home">Home</a> &gt; Premium IPTV Service</span>
+    </div>
 
     <!-- Hero Section -->
     <section id="home" class="hero-gradient text-white py-20">
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 mb-10 md:mb-0">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Premium IPTV Service for Endless Entertainment</h1>
-                <p class="text-xl mb-6">18,000+ Live Channels | 88,000+ VOD | 100% Uptime</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight">Premium IPTV Service with 18,000+ Live Channels</h1>
+                <p class="text-xl mb-6">Experience crystal-clear 4K streaming with our 99.9% uptime guarantee. Watch on any device, anywhere.</p>
                 <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
-                    <a href="#pricing" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 text-center">Get Started</a>
-                    <a href="#trial" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition duration-300 text-center">Free 4-Hour Trial</a>
+                    <a href="#pricing" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 text-center transition duration-300">
+                        <i class="fas fa-play-circle mr-2"></i> Get Started Now
+                    </a>
+                    <a href="#trial" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-primary transition duration-300 text-center">
+                        <i class="fas fa-clock mr-2"></i> Free 24-Hour Trial
+                    </a>
+                </div>
+                <div class="mt-8 flex flex-wrap gap-4">
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                        <span>No Buffering</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                        <span>4K & HD Channels</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                        <span>24/7 Support</span>
+                    </div>
                 </div>
             </div>
             <div class="md:w-1/2 flex justify-center">
-                <img src="https://via.placeholder.com/600x400" alt="IPTV on multiple devices" class="rounded-lg shadow-xl w-full max-w-md">
+                <div class="relative">
+                    <img src="https://via.placeholder.com/600x400/1e3a8a/ffffff?text=4KSimplFlix" alt="4KSimplFlix IPTV on multiple devices" class="rounded-lg shadow-xl w-full max-w-md">
+                    <div class="absolute -bottom-4 -right-4 bg-white text-primary p-3 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <div class="bg-primary bg-opacity-10 p-2 rounded-full mr-3">
+                                <i class="fas fa-trophy text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold">#1 Rated IPTV</p>
+                                <p class="text-xs">Since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="night-section py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                <div class="flex items-center">
+                    <i class="fas fa-shield-alt text-secondary text-3xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-white">Secure Payments</p>
+                        <p class="text-sm text-gray-400">SSL Encryption</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-headset text-secondary text-3xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-white">24/7 Support</p>
+                        <p class="text-sm text-gray-400">Live Chat & Email</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-server text-secondary text-3xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-white">99.9% Uptime</p>
+                        <p class="text-sm text-gray-400">Guaranteed</p>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <i class="fas fa-globe text-secondary text-3xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-white">Worldwide</p>
+                        <p class="text-sm text-gray-400">Coverage</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -91,74 +245,150 @@
     <section id="features" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose 4KSimplFlix?</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Experience the best IPTV service with unmatched quality and reliability</p>
+                <span class="text-primary font-medium">WHY CHOOSE US</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">The Best IPTV Service Provider</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">We provide premium quality IPTV with the most stable servers and largest content library</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
                     <div class="feature-icon bg-primary bg-opacity-10 text-primary mb-4">
-                        <i class="fas fa-satellite-dish text-2xl"></i>
+                        <i class="fas fa-satellite-dish text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">18,000+ Channels</h3>
-                    <p class="text-gray-600">Access to worldwide TV channels including sports, movies, news, and more in multiple languages.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">18,000+ Live Channels</h3>
+                    <p class="text-gray-600">Access to worldwide TV channels including sports, movies, news, and more in multiple languages with EPG guide.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
                     <div class="feature-icon bg-secondary bg-opacity-10 text-secondary mb-4">
-                        <i class="fas fa-film text-2xl"></i>
+                        <i class="fas fa-film text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">88,000+ VOD</h3>
-                    <p class="text-gray-600">Massive Video On Demand library with movies, TV series, documentaries updated regularly.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">88,000+ VOD Content</h3>
+                    <p class="text-gray-600">Massive Video On Demand library with movies, TV series, documentaries updated daily with latest releases.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
-                    <div class="feature-icon bg-purple-500 bg-opacity-10 text-purple-500 mb-4">
-                        <i class="fas fa-bolt text-2xl"></i>
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
+                    <div class="feature-icon bg-blue-500 bg-opacity-10 text-blue-500 mb-4">
+                        <i class="fas fa-bolt text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">100% Uptime</h3>
-                    <p class="text-gray-600">Our premium servers ensure uninterrupted streaming with no buffering or downtime.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">4K & Full HD Quality</h3>
+                    <p class="text-gray-600">Experience crystal clear streaming with our 4K Ultra HD and Full HD channels with adaptive bitrate technology.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
-                    <div class="feature-icon bg-yellow-500 bg-opacity-10 text-yellow-500 mb-4">
-                        <i class="fas fa-tv text-2xl"></i>
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
+                    <div class="feature-icon bg-indigo-500 bg-opacity-10 text-indigo-500 mb-4">
+                        <i class="fas fa-tv text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Multi-Device Support</h3>
-                    <p class="text-gray-600">Watch on Smart TVs, Android, iOS, Firestick, PC, and more. 3 simultaneous connections.</p>
+                    <p class="text-gray-600">Watch on Smart TVs, Android, iOS, Firestick, MAG, PC, and more with 3 simultaneous connections included.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
-                    <div class="feature-icon bg-red-500 bg-opacity-10 text-red-500 mb-4">
-                        <i class="fas fa-hdd text-2xl"></i>
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
+                    <div class="feature-icon bg-purple-500 bg-opacity-10 text-purple-500 mb-4">
+                        <i class="fas fa-hdd text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">Catchup & EPG</h3>
-                    <p class="text-gray-600">Never miss your favorite shows with our 7-day catchup and electronic program guide.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">7-Day Catchup TV</h3>
+                    <p class="text-gray-600">Never miss your favorite shows with our 7-day catchup feature and Timeshift functionality.</p>
                 </div>
-                <div class="bg-gray-50 p-6 rounded-lg text-center">
-                    <div class="feature-icon bg-green-500 bg-opacity-10 text-green-500 mb-4">
-                        <i class="fas fa-headset text-2xl"></i>
+                <div class="bg-gray-50 p-8 rounded-lg text-center hover:shadow-md transition duration-300">
+                    <div class="feature-icon bg-cyan-500 bg-opacity-10 text-cyan-500 mb-4">
+                        <i class="fas fa-headset text-3xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Support</h3>
-                    <p class="text-gray-600">Our dedicated support team is available round the clock to assist you with any issues.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">24/7 Premium Support</h3>
+                    <p class="text-gray-600">Our dedicated support team is available round the clock via live chat, email, and WhatsApp.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-16 bg-gray-50">
+    <!-- Channel Categories Section -->
+    <section id="channels" class="py-16 night-section">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">Simple, Transparent Pricing</h2>
+                <span class="text-secondary font-medium">OUR CONTENT</span>
+                <h2 class="text-3xl font-bold text-white mb-4">Channel Categories</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">We offer the most comprehensive selection of international channels</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-blue-900 text-blue-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-futbol text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Sports</h3>
+                    <p class="text-gray-400 text-sm">3,200+ channels including PPV events</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-red-900 text-red-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-film text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Movies</h3>
+                    <p class="text-gray-400 text-sm">4,500+ movie channels in HD & 4K</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-green-900 text-green-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-newspaper text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">News</h3>
+                    <p class="text-gray-400 text-sm">1,800+ international news channels</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-purple-900 text-purple-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-globe-americas text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">International</h3>
+                    <p class="text-gray-400 text-sm">8,000+ channels in 40+ languages</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-yellow-900 text-yellow-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-child text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Kids</h3>
+                    <p class="text-gray-400 text-sm">1,200+ child-friendly channels</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-pink-900 text-pink-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-music text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Music</h3>
+                    <p class="text-gray-400 text-sm">900+ music channels & concerts</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-indigo-900 text-indigo-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-utensils text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Lifestyle</h3>
+                    <p class="text-gray-400 text-sm">1,500+ cooking & travel channels</p>
+                </div>
+                <div class="night-card p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <div class="bg-gray-700 text-gray-300 p-4 rounded-full inline-block mb-4">
+                        <i class="fas fa-ellipsis-h text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">And More</h3>
+                    <p class="text-gray-400 text-sm">Thousands of additional channels</p>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#pricing" class="bg-secondary text-white font-bold py-3 px-8 rounded-lg hover:bg-opacity-90 transition duration-300 inline-flex items-center">
+                    <i class="fas fa-list-alt mr-2"></i> View Full Channel List
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium">PRICING PLANS</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Affordable IPTV Subscription Plans</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Choose the plan that fits your needs. All plans include full access to all channels and VOD.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <!-- 3 Months Plan -->
-                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-primary pricing-card transition duration-300">
+                <!-- 1 Month Plan -->
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-gray-300 pricing-card">
                     <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">3 Months</h3>
-                        <p class="text-gray-600">Perfect for short-term entertainment</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1 Month</h3>
+                        <p class="text-gray-600">Perfect for testing our service</p>
                     </div>
                     <div class="text-center mb-6">
-                        <span class="text-4xl font-bold text-gray-800">$29</span>
-                        <span class="text-gray-600">/3 months</span>
-                        <p class="text-sm text-gray-500 mt-1">Save 20% compared to monthly</p>
+                        <span class="text-4xl font-bold text-gray-800">$15</span>
+                        <span class="text-gray-600">/month</span>
+                        <p class="text-sm text-gray-500 mt-1">Billed monthly</p>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
@@ -171,26 +401,30 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>3 Devices Simultaneously</span>
+                            <span>3 Devices</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
                             <span>7-Day Catchup</span>
                         </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Standard Support</span>
+                        </li>
                     </ul>
-                    <button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Get Started</button>
+                    <button class="w-full bg-gray-200 text-gray-800 font-bold py-3 px-4 rounded-lg hover:bg-gray-300 transition duration-300">Select Plan</button>
                 </div>
                 
-                <!-- 6 Months Plan (Popular) -->
-                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-secondary pricing-card transform scale-105 relative">
-                    <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">POPULAR</div>
+                <!-- 3 Months Plan (Popular) -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-primary pricing-card transform scale-105 relative">
+                    <div class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">BEST VALUE</div>
                     <div class="text-center mb-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-2">6 Months</h3>
-                        <p class="text-gray-600">Best value for money</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">3 Months</h3>
+                        <p class="text-gray-600">Most popular choice</p>
                     </div>
                     <div class="text-center mb-6">
-                        <span class="text-4xl font-bold text-gray-800">$39</span>
-                        <span class="text-gray-600">/6 months</span>
+                        <span class="text-4xl font-bold text-gray-800">$29</span>
+                        <span class="text-gray-600">/3 months</span>
                         <p class="text-sm text-gray-500 mt-1">Save 35% compared to monthly</p>
                     </div>
                     <ul class="space-y-3 mb-8">
@@ -204,7 +438,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>3 Devices Simultaneously</span>
+                            <span>3 Devices</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -214,20 +448,24 @@
                             <i class="fas fa-check text-green-500 mr-2"></i>
                             <span>Priority Support</span>
                         </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>4K Channels Access</span>
+                        </li>
                     </ul>
-                    <button class="w-full bg-secondary text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Get Started</button>
+                    <button class="w-full bg-primary text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Select Plan</button>
                 </div>
                 
                 <!-- 12 Months Plan -->
-                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-purple-500 pricing-card transition duration-300">
+                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-secondary pricing-card">
                     <div class="text-center mb-6">
                         <h3 class="text-xl font-bold text-gray-800 mb-2">12 Months</h3>
-                        <p class="text-gray-600">For the ultimate entertainment experience</p>
+                        <p class="text-gray-600">For ultimate entertainment</p>
                     </div>
                     <div class="text-center mb-6">
                         <span class="text-4xl font-bold text-gray-800">$49</span>
-                        <span class="text-gray-600">/12 months</span>
-                        <p class="text-sm text-gray-500 mt-1">Save 60% compared to monthly</p>
+                        <span class="text-gray-600">/year</span>
+                        <p class="text-sm text-gray-500 mt-1">Save 72% compared to monthly</p>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center">
@@ -240,7 +478,7 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>3 Devices Simultaneously</span>
+                            <span>3 Devices</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
@@ -248,30 +486,108 @@
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
-                            <span>Priority Support</span>
+                            <span>24/7 VIP Support</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span>Full 4K Access</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-check text-green-500 mr-2"></i>
                             <span>Free 1 Month Extra</span>
                         </li>
                     </ul>
-                    <button class="w-full bg-purple-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Get Started</button>
+                    <button class="w-full bg-secondary text-white font-bold py-3 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">Select Plan</button>
                 </div>
+            </div>
+            <div class="mt-8 text-center">
+                <p class="text-gray-600">All plans come with a 7-day money-back guarantee. Need help choosing? <a href="#contact" class="text-primary hover:underline">Contact our team</a>.</p>
             </div>
         </div>
     </section>
 
     <!-- Free Trial Section -->
-    <section id="trial" class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Try 4KSimplFlix Risk-Free</h2>
-            <p class="text-xl mb-8 max-w-2xl mx-auto">Experience our premium IPTV service with a 4-hour free trial. No credit card required!</p>
-            <form class="max-w-md mx-auto">
-                <div class="mb-4">
-                    <input type="email" placeholder="Your Email Address" class="w-full px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-secondary">
+    <section id="trial" class="py-16 night-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gradient-to-r from-primary to-secondary p-8 rounded-xl shadow-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0">
+                        <h2 class="text-3xl font-bold mb-4">Try 4KSimplFlix Risk-Free</h2>
+                        <p class="text-lg mb-6">Experience our premium IPTV service with a 24-hour free trial. No credit card required!</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                                <span>Full access to all channels</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                                <span>No payment information needed</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-blue-200 mr-2"></i>
+                                <span>Instant activation</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3">
+                        <form class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold text-gray-800 mb-4 text-center">Get Your Free Trial</h3>
+                            <div class="mb-4">
+                                <input type="text" placeholder="Your Name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" placeholder="Email Address" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary text-gray-800">
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition duration-300">
+                                Start Free Trial
+                            </button>
+                            <p class="text-xs text-gray-500 mt-2 text-center">We respect your privacy. No spam.</p>
+                        </form>
+                    </div>
                 </div>
-                <button type="submit" class="bg-white text-primary font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition duration-300 w-full">Get Free Trial</button>
-            </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Devices Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-primary font-medium">COMPATIBILITY</span>
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Works On All Your Devices</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Enjoy 4KSimplFlix on any device with our easy-to-use apps</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fab fa-android text-4xl text-green-500 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Android</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fab fa-apple text-4xl text-gray-600 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">iOS</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fas fa-tv text-4xl text-blue-500 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Smart TV</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fab fa-windows text-4xl text-blue-400 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Windows</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fab fa-amazon text-4xl text-orange-500 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">Fire TV</h3>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm text-center hover:shadow-md transition duration-300">
+                    <i class="fas fa-desktop text-4xl text-gray-700 mb-3"></i>
+                    <h3 class="font-bold text-gray-800">MAG Box</h3>
+                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#" class="text-primary font-medium hover:underline inline-flex items-center">
+                    <i class="fas fa-download mr-2"></i> Download Setup Guides
+                </a>
+            </div>
         </div>
     </section>
 
@@ -279,68 +595,110 @@
     <section id="faq" class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
+                <span class="text-primary font-medium">HAVE QUESTIONS?</span>
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">Find answers to common questions about our IPTV service</p>
             </div>
             <div class="max-w-3xl mx-auto">
-                <div class="mb-4 border-b border-gray-200 pb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-primary focus:outline-none">
-                        <span>What devices can I use with 4KSimplFlix?</span>
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
+                        <span>What is IPTV and how does it work?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden mt-2 text-gray-600">
-                        <p>Our service is compatible with a wide range of devices including Smart TVs (Samsung, LG, etc.), Android TV boxes, Amazon Fire TV Stick, iOS/Android smartphones and tablets, MAG boxes, Windows/Mac computers, and more. We provide detailed setup guides for all supported devices.</p>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>IPTV (Internet Protocol Television) delivers television content over the internet instead of through traditional terrestrial, satellite, or cable formats. With 4KSimplFlix, you can stream live TV channels and on-demand content directly to your device using our dedicated apps or compatible media players. All you need is a stable internet connection and a compatible device.</p>
                     </div>
                 </div>
-                <div class="mb-4 border-b border-gray-200 pb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-primary focus:outline-none">
-                        <span>How many devices can I use simultaneously?</span>
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
+                        <span>What internet speed do I need for smooth streaming?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden mt-2 text-gray-600">
-                        <p>All our plans allow for 3 simultaneous connections. This means you can watch on up to 3 different devices at the same time with a single subscription.</p>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>We recommend the following minimum internet speeds for optimal streaming:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>SD Quality: 5 Mbps</li>
+                            <li>HD Quality: 10 Mbps</li>
+                            <li>Full HD 1080p: 15 Mbps</li>
+                            <li>4K Ultra HD: 25 Mbps</li>
+                        </ul>
+                        <p class="mt-2">For multiple simultaneous streams, multiply these requirements by the number of devices you'll be using at the same time.</p>
                     </div>
                 </div>
-                <div class="mb-4 border-b border-gray-200 pb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-primary focus:outline-none">
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
+                        <span>How do I set up 4KSimplFlix on my device?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>Setup is quick and easy:</p>
+                        <ol class="list-decimal pl-5 mt-2 space-y-1">
+                            <li>Download our app from the appropriate app store or our website</li>
+                            <li>Install the app on your device</li>
+                            <li>Launch the app and enter your login credentials</li>
+                            <li>Start enjoying your content immediately</li>
+                        </ol>
+                        <p class="mt-2">We provide detailed setup guides for all supported devices in our <a href="#" class="text-primary hover:underline">Knowledge Base</a>.</p>
+                    </div>
+                </div>
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
+                        <span>Can I watch 4KSimplFlix while traveling abroad?</span>
+                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>Yes! 4KSimplFlix works worldwide as long as you have a stable internet connection. However, some content may be geo-restricted based on your location due to licensing agreements. We recommend using a VPN service if you want to access content that's normally available in your home country while traveling.</p>
+                    </div>
+                </div>
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
                         <span>What payment methods do you accept?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden mt-2 text-gray-600">
-                        <p>We accept all major credit cards (Visa, MasterCard, American Express), PayPal, and cryptocurrency payments (Bitcoin, Ethereum). All payments are processed securely through our payment gateway partners.</p>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>We accept all major payment methods:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Credit/Debit Cards (Visa, MasterCard, American Express)</li>
+                            <li>PayPal</li>
+                            <li>Cryptocurrencies (Bitcoin, Ethereum, Litecoin)</li>
+                            <li>Bank Transfers (for annual plans)</li>
+                        </ul>
+                        <p class="mt-2">All payments are processed securely through our payment gateway partners.</p>
                     </div>
                 </div>
-                <div class="mb-4 border-b border-gray-200 pb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-primary focus:outline-none">
-                        <span>Do you offer refunds?</span>
+                <div class="mb-4 border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-toggle flex justify-between items-center w-full text-left p-4 bg-gray-50 hover:bg-gray-100 font-medium text-gray-800 focus:outline-none">
+                        <span>How can I contact customer support?</span>
                         <i class="fas fa-chevron-down transition-transform duration-300"></i>
                     </button>
-                    <div class="faq-content hidden mt-2 text-gray-600">
-                        <p>Due to the nature of our service, we generally don't offer refunds. However, if you experience technical issues that we cannot resolve within 24 hours of your purchase, we will issue a full refund. We encourage you to try our free trial before purchasing to ensure our service meets your expectations.</p>
+                    <div class="faq-content hidden p-4 bg-white text-gray-600">
+                        <p>Our customer support team is available 24/7 through multiple channels:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Live Chat: Available on our website (fastest response)</li>
+                            <li>Email: support@4ksimplflix.com</li>
+                            <li>WhatsApp: +1 (555) 123-4567</li>
+                            <li>Ticketing System: Through your client area</li>
+                        </ul>
+                        <p class="mt-2">Average response time is under 15 minutes for live chat and under 2 hours for email.</p>
                     </div>
                 </div>
-                <div class="mb-4 border-b border-gray-200 pb-4">
-                    <button class="faq-toggle flex justify-between items-center w-full text-left font-medium text-gray-800 hover:text-primary focus:outline-none">
-                        <span>How often is your content updated?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                    </button>
-                    <div class="faq-content hidden mt-2 text-gray-600">
-                        <p>Our live TV channels are monitored 24/7 for quality and stability. Our VOD library is updated daily with new movies and TV shows, typically within hours of their official release. We also add new channels regularly based on customer demand.</p>
-                    </div>
-                </div>
+            </div>
+            <div class="mt-12 text-center">
+                <p class="text-gray-600">Didn't find your answer? <a href="#contact" class="text-primary hover:underline">Contact our support team</a>.</p>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-50">
+    <section class="py-16 night-section">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-800 mb-4">What Our Customers Say</h2>
-                <p class="text-gray-600 max-w-2xl mx-auto">Join thousands of satisfied customers enjoying premium IPTV</p>
+                <span class="text-secondary font-medium">TESTIMONIALS</span>
+                <h2 class="text-3xl font-bold text-white mb-4">What Our Customers Say</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Join thousands of satisfied customers enjoying premium IPTV</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="night-card p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -349,19 +707,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <span class="text-sm text-gray-400">2 days ago</span>
                     </div>
-                    <p class="text-gray-600 mb-4">"I've tried many IPTV services before, but 4KSimplFlix is by far the best. The channel selection is incredible and the quality is consistently excellent. Highly recommended!"</p>
+                    <p class="text-gray-300 mb-6">"I've tried many IPTV services before, but 4KSimplFlix is by far the best. The channel selection is incredible and the quality is consistently excellent. The 4K sports channels are a game-changer!"</p>
                     <div class="flex items-center">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-gray-500"></i>
+                        <div class="bg-gray-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800">John D.</h4>
-                            <p class="text-sm text-gray-500">Verified Customer</p>
+                            <h4 class="font-bold text-white">John D.</h4>
+                            <p class="text-sm text-gray-400">Verified Customer</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="night-card p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -370,19 +729,20 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <span class="text-sm text-gray-400">1 week ago</span>
                     </div>
-                    <p class="text-gray-600 mb-4">"The VOD library is massive and always up-to-date. I canceled all my other streaming subscriptions because 4KSimplFlix has everything I need at a fraction of the cost."</p>
+                    <p class="text-gray-300 mb-6">"The VOD library is massive and always up-to-date. I canceled all my other streaming subscriptions because 4KSimplFlix has everything I need at a fraction of the cost. Setup was a breeze too!"</p>
                     <div class="flex items-center">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-gray-500"></i>
+                        <div class="bg-gray-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah M." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Sarah M.</h4>
-                            <p class="text-sm text-gray-500">Verified Customer</p>
+                            <h4 class="font-bold text-white">Sarah M.</h4>
+                            <p class="text-sm text-gray-400">Verified Customer</p>
                         </div>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
+                <div class="night-card p-8 rounded-lg shadow-sm">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -391,18 +751,24 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <span class="text-sm text-gray-400">3 weeks ago</span>
                     </div>
-                    <p class="text-gray-600 mb-4">"Customer support is amazing! They helped me set up my devices quickly and responded to my questions within minutes. The service itself has been flawless for 6 months now."</p>
+                    <p class="text-gray-300 mb-6">"Customer support is amazing! They helped me set up my Firestick quickly and responded to my questions within minutes. The service itself has been flawless for 6 months now with zero buffering."</p>
                     <div class="flex items-center">
-                        <div class="bg-gray-200 rounded-full w-10 h-10 flex items-center justify-center mr-3">
-                            <i class="fas fa-user text-gray-500"></i>
+                        <div class="bg-gray-600 rounded-full w-12 h-12 flex items-center justify-center mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Robert T." class="w-full h-full object-cover">
                         </div>
                         <div>
-                            <h4 class="font-bold text-gray-800">Robert T.</h4>
-                            <p class="text-sm text-gray-500">Verified Customer</p>
+                            <h4 class="font-bold text-white">Robert T.</h4>
+                            <p class="text-sm text-gray-400">Verified Customer</p>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-flex items-center text-secondary font-medium hover:underline">
+                    <i class="fas fa-star mr-2"></i> Read more reviews on Trustpilot
+                </a>
             </div>
         </div>
     </section>
@@ -412,78 +778,86 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto bg-gray-50 rounded-xl p-8 shadow-sm">
                 <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Contact Us</h2>
-                    <p class="text-gray-600">Have questions? Our support team is available 24/7 to assist you.</p>
+                    <span class="text-primary font-medium">GET IN TOUCH</span>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-2">Contact Our Support Team</h2>
+                    <p class="text-gray-600">We're here to help 24/7 with any questions or issues you may have</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                         <form>
                             <div class="mb-4">
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Your Name</label>
                                 <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
                             </div>
                             <div class="mb-4">
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email Address</label>
                                 <input type="email" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
                             </div>
                             <div class="mb-4">
                                 <label for="subject" class="block text-gray-700 font-medium mb-2">Subject</label>
-                                <input type="text" id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                <select id="subject" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="">Select a subject</option>
+                                    <option value="sales">Sales Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="billing">Billing Question</option>
+                                    <option value="other">Other</option>
+                                </select>
                             </div>
                             <div class="mb-4">
-                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Your Message</label>
                                 <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
                             </div>
-                            <button type="submit" class="bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300 w-full">Send Message</button>
+                            <button type="submit" class="w-full bg-primary text-white font-bold py-3 px-6 rounded-lg hover:bg-opacity-90 transition duration-300">
+                                Send Message
+                            </button>
                         </form>
                     </div>
                     <div>
                         <div class="bg-white p-6 rounded-lg shadow-sm h-full">
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Contact Information</h3>
-                            <div class="space-y-4">
+                            <h3 class="text-xl font-bold text-gray-800 mb-6">Contact Information</h3>
+                            <div class="space-y-6">
                                 <div class="flex items-start">
-                                    <div class="bg-primary bg-opacity-10 text-primary p-2 rounded-lg mr-4">
-                                        <i class="fas fa-envelope text-lg"></i>
+                                    <div class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-envelope text-xl"></i>
                                     </div>
                                     <div>
-                                        <h4 class="font-bold text-gray-800">Email</h4>
+                                        <h4 class="font-bold text-gray-800">Email Support</h4>
                                         <p class="text-gray-600">support@4ksimplflix.com</p>
+                                        <p class="text-gray-600">sales@4ksimplflix.com</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
-                                    <div class="bg-secondary bg-opacity-10 text-secondary p-2 rounded-lg mr-4">
-                                        <i class="fas fa-headset text-lg"></i>
+                                    <div class="bg-secondary bg-opacity-10 text-secondary p-3 rounded-lg mr-4">
+                                        <i class="fas fa-headset text-xl"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-gray-800">Live Chat</h4>
                                         <p class="text-gray-600">Available 24/7 on our website</p>
+                                        <p class="text-gray-600">Average response time: 5 minutes</p>
                                     </div>
                                 </div>
                                 <div class="flex items-start">
-                                    <div class="bg-purple-500 bg-opacity-10 text-purple-500 p-2 rounded-lg mr-4">
-                                        <i class="fas fa-comment-dots text-lg"></i>
+                                    <div class="bg-purple-500 bg-opacity-10 text-purple-500 p-3 rounded-lg mr-4">
+                                        <i class="fab fa-whatsapp text-xl"></i>
                                     </div>
                                     <div>
                                         <h4 class="font-bold text-gray-800">WhatsApp</h4>
                                         <p class="text-gray-600">+1 (555) 123-4567</p>
+                                        <p class="text-gray-600">Available 24/7</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-8">
-                                <h4 class="font-bold text-gray-800 mb-3">Follow Us</h4>
-                                <div class="flex space-x-4">
-                                    <a href="#" class="bg-gray-200 text-gray-700 p-2 rounded-full hover:bg-primary hover:text-white transition duration-300">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                    <a href="#" class="bg-gray-200 text-gray-700 p-2 rounded-full hover:bg-blue-400 hover:text-white transition duration-300">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                    <a href="#" class="bg-gray-200 text-gray-700 p-2 rounded-full hover:bg-pink-600 hover:text-white transition duration-300">
-                                        <i class="fab fa-instagram"></i>
-                                    </a>
-                                    <a href="#" class="bg-gray-200 text-gray-700 p-2 rounded-full hover:bg-red-600 hover:text-white transition duration-300">
-                                        <i class="fab fa-youtube"></i>
-                                    </a>
+                            <div class="mt-10">
+                                <h4 class="font-bold text-gray-800 mb-4">Business Hours</h4>
+                                <div class="space-y-2">
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Monday - Friday</span>
+                                        <span class="text-gray-800 font-medium">24/7</span>
+                                    </div>
+                                    <div class="flex justify-between">
+                                        <span class="text-gray-600">Saturday - Sunday</span>
+                                        <span class="text-gray-800 font-medium">24/7</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -493,58 +867,105 @@
         </div>
     </section>
 
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Start Streaming?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Join thousands of satisfied customers enjoying premium IPTV at unbeatable prices.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#pricing" class="bg-white text-primary font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-play-circle mr-2"></i> Start Watching Now
+                </a>
+                <a href="#trial" class="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-primary transition duration-300 inline-flex items-center justify-center">
+                    <i class="fas fa-clock mr-2"></i> Try Free for 24 Hours
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="bg-dark text-gray-300 py-12">
+    <footer class="night-section pt-12 pb-6">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-tv text-primary text-2xl mr-2"></i>
-                        <h3 class="text-xl font-bold text-white">4K<span class="text-primary">SimplFlix</span></h3>
+                        <i class="fas fa-tv text-secondary text-2xl mr-2"></i>
+                        <h3 class="text-xl font-bold text-white">4K<span class="text-secondary">SimplFlix</span></h3>
                     </div>
-                    <p class="mb-4">Premium IPTV service with the best quality and reliability. Over 18,000 channels and 88,000 VOD at your fingertips.</p>
-                    <p>© 2023 4KSimplFlix. All rights reserved.</p>
+                    <p class="mb-4 night-light-text">Premium IPTV service with the best quality and reliability. Over 18,000 channels and 88,000 VOD at your fingertips.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-700 text-white p-2 rounded-full hover:bg-blue-600 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 text-white p-2 rounded-full hover:bg-blue-400 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 text-white p-2 rounded-full hover:bg-pink-600 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-700 text-white p-2 rounded-full hover:bg-red-600 transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="#home" class="hover:text-primary transition duration-300">Home</a></li>
-                        <li><a href="#features" class="hover:text-primary transition duration-300">Features</a></li>
-                        <li><a href="#pricing" class="hover:text-primary transition duration-300">Pricing</a></li>
-                        <li><a href="#faq" class="hover:text-primary transition duration-300">FAQ</a></li>
-                        <li><a href="#contact" class="hover:text-primary transition duration-300">Contact</a></li>
+                        <li><a href="#home" class="night-light-text hover:text-secondary transition duration-300">Home</a></li>
+                        <li><a href="#features" class="night-light-text hover:text-secondary transition duration-300">Features</a></li>
+                        <li><a href="#pricing" class="night-light-text hover:text-secondary transition duration-300">Pricing</a></li>
+                        <li><a href="#channels" class="night-light-text hover:text-secondary transition duration-300">Channels</a></li>
+                        <li><a href="#faq" class="night-light-text hover:text-secondary transition duration-300">FAQ</a></li>
+                        <li><a href="#contact" class="night-light-text hover:text-secondary transition duration-300">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-primary transition duration-300">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-primary transition duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-primary transition duration-300">Refund Policy</a></li>
-                        <li><a href="#" class="hover:text-primary transition duration-300">DMCA</a></li>
+                        <li><a href="#" class="night-light-text hover:text-secondary transition duration-300">Terms of Service</a></li>
+                        <li><a href="#" class="night-light-text hover:text-secondary transition duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="night-light-text hover:text-secondary transition duration-300">Refund Policy</a></li>
+                        <li><a href="#" class="night-light-text hover:text-secondary transition duration-300">DMCA</a></li>
+                        <li><a href="#" class="night-light-text hover:text-secondary transition duration-300">Cookie Policy</a></li>
                     </ul>
                 </div>
                 <div>
                     <h4 class="text-lg font-bold text-white mb-4">Newsletter</h4>
-                    <p class="mb-4">Subscribe to get updates on new channels, features, and special offers.</p>
-                    <form class="flex">
+                    <p class="mb-4 night-light-text">Subscribe to get updates on new channels, features, and special offers.</p>
+                    <form class="flex mb-4">
                         <input type="email" placeholder="Your Email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
-                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition duration-300">
+                        <button type="submit" class="bg-secondary text-white px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition duration-300">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </form>
+                    <div class="flex items-center">
+                        <i class="fas fa-lock text-secondary mr-2"></i>
+                        <span class="text-sm night-light-text">Secure Payment</span>
+                    </div>
+                    <div class="flex mt-2 space-x-2">
+                        <img src="https://via.placeholder.com/40x25/1e3a8a/ffffff?text=VISA" alt="Visa" class="h-6">
+                        <img src="https://via.placeholder.com/40x25/1e3a8a/ffffff?text=MC" alt="MasterCard" class="h-6">
+                        <img src="https://via.placeholder.com/40x25/1e3a8a/ffffff?text=PP" alt="PayPal" class="h-6">
+                        <img src="https://via.placeholder.com/40x25/1e3a8a/ffffff?text=BTC" alt="Bitcoin" class="h-6">
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>Disclaimer: 4KSimplFlix is not responsible for any content accessed through our service. All content is provided by third parties.</p>
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p class="night-light-text">© 2023 4KSimplFlix. All rights reserved. All trademarks and logos are the property of their respective owners.</p>
+                <p class="mt-2 text-sm night-light-text">Disclaimer: 4KSimplFlix does not broadcast or provide any TV channels or streams. We simply provide access to publicly available internet streams. The end user is solely responsible for media accessed through our service.</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <button id="back-to-top" class="fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 hidden">
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-secondary text-white p-3 rounded-full shadow-lg hover:bg-opacity-90 transition duration-300 hidden">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Live Chat Widget -->
+    <div class="fixed bottom-6 left-6 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition duration-300 cursor-pointer">
+        <i class="fas fa-comment-dots text-xl"></i>
+    </div>
 
     <script>
         // Mobile Menu Toggle
@@ -604,6 +1025,21 @@
                         mobileMenu.classList.add('hidden');
                     }
                 }
+            });
+        });
+        // Form submission handling
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would normally handle form submission with AJAX
+                // For demo purposes, we'll just show an alert
+                if (this.id === 'trial-form') {
+                    alert('Thank you! Your free trial request has been received. We will email you shortly with access details.');
+                } else if (this.id === 'contact-form') {
+                    alert('Thank you for your message! Our support team will get back to you shortly.');
+                }
+                this.reset();
             });
         });
     </script>
